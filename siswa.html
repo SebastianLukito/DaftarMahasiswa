@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caltech</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="data.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.1.0/math.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="judul">
+            <img src="caltech-logo.png" alt="Caltech Logo">
+            <h1>DAFTAR MAHASISWA FAKULTAS TEKNIK INFORMATIKA
+                <br>CALIFORNIA INSTITUTE OF TECHNOLOGY
+            </h1>
+            <p>Pasadena, California, USA</p>
+
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Cari nama mahasiswa">
+            <button onclick="searchStudent()">Cari</button>
+        </div>
+    </header>
+    <main>
+        <div class="button-container">
+            <button onclick="displayStudents()">Tampilkan Daftar Mahasiswa</button>
+            <button onclick="addStudent()">Tambah Mahasiswa Baru</button>
+            <button onclick="deleteStudent()">Hapus Mahasiswa</button>
+            <button onclick="updateStudent()">Ubah IPK Mahasiswa</button>
+            <button onclick="calculateStatistics()">Hitung IPK Rata-Rata Fakultas</button>
+            <button onclick="displayHighestGrade()">Tampilkan IPK Tertinggi</button>
+            <button onclick="displayLowestGrade()">Tampilkan IPK Terendah</button>
+        </div>
+        <div class="table-container">
+            <table id="studentTable">
+                <thead>
+                    <tr>
+                        <th id="no">Nomor</th>
+                        <th id="nama">Nama</th>
+                        <th id="jenisKelamin">Jenis Kelamin</th>
+                        <th id="tempatLahir">Tempat Lahir</th>
+                        <th id="tanggalLahir">Tanggal Lahir</th>
+                        <th id="IPK">IPK</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Isi tabel akan diisi oleh JavaScript dan Data Siswa -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="output">
+            <h2>Hasil</h2>
+            <div id="output"></div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
